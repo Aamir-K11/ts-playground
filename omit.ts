@@ -1,4 +1,4 @@
-type OmitKeys<T, K extends keyof T> = { [P in keyof T as P extends K ? never: P]: T[P]  };
+type OmitKeys<T extends {}, K extends keyof T> = { [P in keyof T as P extends K ? never: P]: T[P]  };
 
 
 
